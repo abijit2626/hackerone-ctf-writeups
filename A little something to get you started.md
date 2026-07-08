@@ -1,31 +1,57 @@
-# A Little Something to Get You Started — Hacker101 CTF Write-Up
+# A Little Something to Get You Started
 
-## Overview
+## Challenge Information
+- Category: Web
+- Difficulty: Easy
+- Platform: Hacker101
+- Points: 1
 
-A basic web challenge serving as an introduction to Hacker101 CTF. The flag is hidden directly in the page source.
+## Challenge Description
+A simple web page displaying: *"Welcome to level 0. Enjoy your stay."*
 
----
+## Initial Analysis
+- Nothing is displayed on the page itself, so the flag must be hidden in the page source or assets.
+- The simplest hiding place for a flag in a basic challenge is an HTML comment.
 
-## Flag — HTML Comment
+## Enumeration
 
-**Hint:** Look at the source.
+### Step 1 — View the page source
 
-The challenge page displays a simple message: *"Welcome to level 0. Enjoy your stay."*
+Open the page and view the source (right-click → View Page Source, or `Ctrl+U`).
 
-### Steps
+```html
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url("background.png");
+            }
+        </style>
+    </head>
+    <body>
+        <p>Welcome to level 0.  Enjoy your stay.</p>
+    </body>
+</html>
+```
 
-1. Open the page in a browser.
-2. View the page source (right-click → View Page Source, or `Ctrl+U`).
-3. The flag is hidden in an HTML comment:
+The flag is not visible in the rendered output but appears in the raw HTML.
+
+## Exploitation
+
+### Step 1 — Find the flag
+
+View the page source. The flag is hidden in an HTML comment:
+
 ```html
 <!-- ^FLAG^...$FLAG$ -->
 ```
 
-### Tools Used
+## Flag
 
-- Browser developer tools
-- curl
+```
+^FLAG^...$FLAG$
+```
 
-| Flag | Technique | Difficulty |
-|------|-----------|------------|
-| Flag | View Source | Trivial |
+**Technique:** View Source
+**Difficulty:** Trivial
