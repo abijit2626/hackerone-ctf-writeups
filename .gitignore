@@ -1,0 +1,3 @@
+node_modules/
+*.log
+poattack-cache.json.gz.txt

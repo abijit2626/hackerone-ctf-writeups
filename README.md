@@ -1,13 +1,16 @@
 # HackerOne CTF Writeups
 
-This repository contains writeups and solutions for HackerOne CTF challenges.
+Writeups for [Hacker101 CTF](https://ctf.hacker101.com/) challenges.
 
 ## Challenges
 
-- [A Little Something to Get You Started](./A%20little%20something%20to%20get%20you%20started.md)
-- [Micro-CMS v1](./Micro-CMS%20v1.md)
-- [Micro-CMS v2](./Micro-CMS%20v2.md)
+| Challenge | Points | Writeup |
+|-----------|--------|---------|
+| A Little Something to Get You Started | 1 | [writeup](writeups/a-little-something-to-get-you-started.md) |
+| Micro-CMS v1 | 2 | [writeup](writeups/micro-cms-v1.md) |
+| Micro-CMS v2 | 3 | [writeup](writeups/micro-cms-v2.md) |
 
----
+## Tools
 
-More write-ups added as they're completed.
+- `exploit.py` — Padding oracle attack script for Encrypted Pastebin
+- `exploit_paddingoracle.py` — Alternative implementation using `python-paddingoracle` library
