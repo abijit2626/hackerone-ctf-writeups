@@ -7,9 +7,9 @@
 - **Description provided:** A content management system with user authentication. Admin privileges required to add or edit pages.
 
 ## TL;DR
-- **Flag 0:** `^FLAG^...$FLAG$`
-- **Flag 1:** `^FLAG^...$FLAG$`
-- **Flag 2:** `^FLAG^...$FLAG$`
+- **Flag 0:** `^FLAG^cb72b1fdf1d8022037410a03a8015b20b370840474bd32314d409378088a0bb6$FLAG$`
+- **Flag 1:** `^FLAG^9973127ac2dc004f7523694acc1c46172bc942c515cec014943d5f69773ce62e$FLAG$`
+- **Flag 2:** `^FLAG^d9dcb4242ec8c65b84f35754ffce7ab9e646f0d776dbb87d2cf33e7fafebf765$FLAG$`
 - **Vulnerability/trick:** Flag 0 — UNION SQL injection in login bypasses auth. Flag 1 — HTTP method tampering (PATCH/PUT) bypasses POST-only auth checks. Flag 2 — Database credentials (password field) are the flag itself, extracted via sqlmap.
 
 ## Recon
@@ -78,9 +78,13 @@ Why this works: The application only checks authorization for `POST` requests to
 
 Why this works: The password column in the database literally stores the flag. sqlmap automates blind SQL injection to enumerate the schema and dump table contents.
 
+## Exploit / Script
+
+N/A — manual curl and sqlmap commands used directly.
+
 ## Flag Capture
 ```
-Flag 0: ^FLAG^...$FLAG$
-Flag 1: ^FLAG^...$FLAG$
-Flag 2: ^FLAG^...$FLAG$
+Flag 0: ^FLAG^cb72b1fdf1d8022037410a03a8015b20b370840474bd32314d409378088a0bb6$FLAG$
+Flag 1: ^FLAG^9973127ac2dc004f7523694acc1c46172bc942c515cec014943d5f69773ce62e$FLAG$
+Flag 2: ^FLAG^d9dcb4242ec8c65b84f35754ffce7ab9e646f0d776dbb87d2cf33e7fafebf765$FLAG$
 ```

@@ -7,7 +7,7 @@
 - **Description provided:** A simple web page displaying "Welcome to level 0. Enjoy your stay."
 
 ## TL;DR
-- **Flag:** `^FLAG^5e1f77d850c7c774c7ed1e46cfbe894fbb74ec021fbe56f8e56f5735c51fc0a9$FLAG$`
+- **Flag:** `^FLAG^72255da2e24aef064315ba428679af0546aa1feb444da7938c0f61fff62414b0$FLAG$`
 - **Vulnerability/trick:** Flag hidden in an HTML comment in the page source.
 
 ## Recon
@@ -19,12 +19,16 @@
 2. View page source (right-click → View Page Source or `Ctrl+U`).
 3. Read the HTML comment:
 ```html
-<!-- ^FLAG^5e1f77d850c7c774c7ed1e46cfbe894fbb74ec021fbe56f8e56f5735c51fc0a9$FLAG$ -->
+<!-- ^FLAG^72255da2e24aef064315ba428679af0546aa1feb444da7938c0f61fff62414b0$FLAG$ -->
 ```
 
 No exploitation needed — the flag is directly visible in the source.
 
 ## Flag Capture
 ```
-^FLAG^5e1f77d850c7c774c7ed1e46cfbe894fbb74ec021fbe56f8e56f5735c51fc0a9$FLAG$
+^FLAG^72255da2e24aef064315ba428679af0546aa1feb444da7938c0f61fff62414b0$FLAG$
 ```
+
+## Exploit / Script
+
+N/A — flag directly visible in HTML source.

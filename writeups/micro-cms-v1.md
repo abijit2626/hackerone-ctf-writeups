@@ -7,8 +7,8 @@
 - **Description provided:** A simple content management system with pages, creation, and editing functionality. No authentication.
 
 ## TL;DR
-- **Flag 1:** `^FLAG^...$FLAG$` (hidden admin page)
-- **Flag 2:** `^FLAG^...$FLAG$` (stored XSS trigger)
+- **Flag 1:** `^FLAG^4c0f57066b1a1552a4bbf2ac457450992e67720b4e75a05f22510586a1c2cf7b$FLAG$` (hidden admin page)
+- **Flag 2:** `^FLAG^743d18cb6432bf139407ddab84514c9c41cc90767b4bec84d1a649b77868eb69$FLAG$` (stored XSS trigger)
 - **Vulnerability/trick:** Flag 1 — IDOR via edit endpoint bypasses view restriction on `/page/4`. Flag 2 — Page titles rendered unescaped on homepage allow stored XSS, and triggering XSS detection reveals the flag.
 
 ## Recon
@@ -48,6 +48,10 @@ Why this works: The title field is rendered raw in the page listing (no HTML enc
 
 ## Flag Capture
 ```
-Flag 1: ^FLAG^...$FLAG$
-Flag 2: ^FLAG^...$FLAG$
+Flag 1: ^FLAG^4c0f57066b1a1552a4bbf2ac457450992e67720b4e75a05f22510586a1c2cf7b$FLAG$
+Flag 2: ^FLAG^743d18cb6432bf139407ddab84514c9c41cc90767b4bec84d1a649b77868eb69$FLAG$
 ```
+
+## Exploit / Script
+
+N/A — manual requests via curl/Burp Suite.
