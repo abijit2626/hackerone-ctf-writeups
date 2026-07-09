@@ -9,8 +9,4 @@ Writeups for [Hacker101 CTF](https://ctf.hacker101.com/) challenges.
 | A Little Something to Get You Started | 1 | [writeup](writeups/a-little-something-to-get-you-started.md) |
 | Micro-CMS v1 | 2 | [writeup](writeups/micro-cms-v1.md) |
 | Micro-CMS v2 | 3 | [writeup](writeups/micro-cms-v2.md) |
-
-## Tools
-
-- `exploit.py` — Padding oracle attack script for Encrypted Pastebin
-- `exploit_paddingoracle.py` — Alternative implementation using `python-paddingoracle` library
+| Encrypted Pastebin | 3 | [writeup](writeups/encrypted-pastebin.md) |
