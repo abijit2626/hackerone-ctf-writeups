@@ -2,7 +2,7 @@
 
 ## Challenge Info
 - **Category:** Web/Crypto
-- **Points:** 3 (3 flags)
+- **Points:** 4 (4 flags)
 - **Files/URL given:** Hacker101 CTF instance URL
 - **Description provided:** An encrypted pastebin service. Users can create encrypted pastes via a form, and view them via `?post=<ciphertext>` parameter.
 

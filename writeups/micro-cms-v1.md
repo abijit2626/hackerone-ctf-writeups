@@ -2,7 +2,7 @@
 
 ## Challenge Info
 - **Category:** Web
-- **Points:** 2 (2 flags)
+- **Points:** 4 (4 flags)
 - **Files/URL given:** Hacker101 CTF instance URL
 - **Description provided:** A simple content management system with pages, creation, and editing functionality. No authentication.
 
