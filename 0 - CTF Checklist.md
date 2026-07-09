@@ -41,6 +41,14 @@
 - [ ] Check response headers for info leakage (`X-Powered-By`, `Server`, custom headers)
 - [ ] Look at status codes carefully: `403` = exists, `404` = doesn't, `200` = public
 
+## 9. Crypto / Padding Oracle
+- [ ] Check if ciphertext is passed as a URL parameter (`?post=<data>`)
+- [ ] Look for distinct error messages on bad padding (`PaddingException` vs other errors)
+- [ ] Note non-standard base64 alphabets (`-` for `+`, `!` for `/`, `~` for `=`)
+- [ ] Use `poattack` or PadBuster for CBC byte-at-a-time decryption
+- [ ] After decryption, check JSON payloads for `flag`, `id`, and `key` fields
+- [ ] Use encryption mode to forge ciphertexts for SQLi in the `id` field
+
 ---
 
-**Golden Rule:** If a hint mentions a technique (UNION, methods, credentials), that's your attack vector. Try the simplest thing first.
+**Golden Rule:** If a hint mentions a technique (UNION, methods, credentials, encryption), that's your attack vector. Try the simplest thing first.
